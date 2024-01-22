@@ -17,7 +17,7 @@ namespace semaine1
         static void Exercice1()
         {
             Console.WriteLine("Allo p2");
-        }
+        }       
         /// <summary>
         /// Identifie et imprime deux nombre donner en parametre
         /// </summary>
@@ -248,6 +248,22 @@ namespace semaine1
         static void Exercice16()
         {
             Console.WriteLine("* * *\n* * *\n* * *");
+        }
+        /// <summary>
+        /// Affiche une grille de "*" d'une longueur et une largeur donner en parametre
+        /// </summary>
+        /// <param name="longueur">Longueur de la grille</param>
+        /// <param name="largeur">Largeur de la grille</param>
+        static void Exercice17(int longueur, int largeur)
+        {
+            for (int i = 0; i < longueur; i++)
+            {
+                for (int j = 0; j < largeur; j++)
+                {
+                    Console.Write("* ");
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
