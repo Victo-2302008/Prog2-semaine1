@@ -671,5 +671,13 @@ namespace semaine1
                 tableau[j] = resultat[j];
             }
         }
+        /// <summary>
+        /// Substitue la premiere moitier et la deuxieme moitier du taableau donner en parametre
+        /// </summary>
+        /// <param name="tableau">Tableau de nombre. Doit etre d'une longueur pair</param>
+        static void Exercice33(int[] tableau)
+        {
+
+        }
     }
 }
