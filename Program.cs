@@ -265,5 +265,27 @@ namespace semaine1
                 Console.WriteLine();
             }
         }
+        /// <summary>
+        /// Affiche une grille de "*" d'une longueur et une largeur donner en parametre
+        /// </summary>
+        /// <remarks>La longueur et la largueur peuvent etre negatives
+        /// <param name="longueur">Longueur de la grille</param>
+        /// <param name="largeur">Largeur de la grille</param>
+        static void Exercice18(int longueur, int largeur)
+        {
+            longueur = Math.Abs(longueur);
+            largeur = Math.Abs(largeur);
+
+            for (int i = 0; i < longueur; i++)
+            {
+                int j = 0;
+                while (j < largeur)
+                {
+                    Console.Write("* ");
+                    j++;
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }
