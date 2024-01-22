@@ -11,11 +11,8 @@ namespace semaine1
         static void Main(string[] args)
         {
             int[] tableau = {1,2,3,4};
-            Exercice30(tableau,2,7);
-            foreach(int num in tableau)
-            {
-                Console.Write(num);
-            }
+            
+            Console.WriteLine(Exercice31(tableau));
             
         }
         /// <summary>
@@ -611,6 +608,36 @@ namespace semaine1
             tableau[index1] = tableau[index2];
             tableau[index2] = mem;
         }
+        /// <summary>
+        /// Retourne l'index du plus gros nombre du tableau donner en parametre
+        /// </summary>
+        /// <param name="tableau">Tableau de nombre. Doit etre au moins 1 de longueur</param>
+        /// <returns>Index du plus gros nombre</returns>
+        static int Exercice31(int[] tableau)
+        {
+            // debug
+
+            if (tableau.Length < 1)
+            {
+                Debug.WriteLine("Le tableau n'est pas assez long. minimum = 1 tableau est de  " + tableau.Length, "Exercice31");
+                return -1;
+            }
+
+            // code
+            int num = -999999999;
+            int index = 0;
+
+            for (int i = 0; i < tableau.Length;i++)
+            {
+                if (tableau[i] > num)
+                {
+                    index = i;
+                }
+            }
+
+            return index;
+        }
+
         
     }
 }
