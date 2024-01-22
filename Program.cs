@@ -10,8 +10,13 @@ namespace semaine1
     {
         static void Main(string[] args)
         {
-            int[] tableau = {1,2,3,-5,8,3};
-            Console.WriteLine(Exercice28(tableau));
+            int[] tableau = {1,2,3,4};
+            Exercice30(tableau,2,7);
+            foreach(int num in tableau)
+            {
+                Console.Write(num);
+            }
+            
         }
         /// <summary>
         /// Afficher "Allo p2" a la console
@@ -553,6 +558,21 @@ namespace semaine1
         /// <returns>Le plus grand nombre</returns>
         static int Exercice29(int[] tableau, int index1, int index2)
         {
+            // debug
+
+            if (index1 < 0 || index1 > tableau.Length)
+            {
+                Debug.WriteLine("Impossible d'utiliser " + index1 + " comme premier index", "Exercice 30 ");
+                return -1;
+            }
+            if (index2 < 0 || index2 > tableau.Length)
+            {
+                Debug.WriteLine("Impossible d'utiliser " + index2 + " comme deuxieme index", "Exercice 30 ");
+                return -1;
+            }
+
+            // code
+
             int resultat;
             if (tableau[index1] > tableau[index2])
             {
@@ -564,7 +584,33 @@ namespace semaine1
             }
             return resultat;
         }
+        /// <summary>
+        /// Inverse dans un tableau donner en parametre les deux position donner en parametre
+        /// </summary>
+        /// <param name="tableau">Tableau de nombre</param>
+        /// <param name="index1">Premiere position</param>
+        /// <param name="index2">Deuxieme position</param>
+        static void Exercice30(int[] tableau, int index1, int index2)
+        {
+            // Debug 
 
+            if (index1 < 0 || index1 > tableau.Length)
+            {
+                Debug.WriteLine("Impossible d'utiliser " + index1 + " comme premier index", "Exercice 31 ");
+                return;
+            }
+            if (index2 < 0 || index2 > tableau.Length)
+            {
+                Debug.WriteLine("Impossible d'utiliser " + index2 + " comme deuxieme index", "Exercice 31 ");
+                return;
+            }
+
+            // code
+
+            int mem = tableau[index1];
+            tableau[index1] = tableau[index2];
+            tableau[index2] = mem;
+        }
         
     }
 }
