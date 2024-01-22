@@ -170,6 +170,30 @@ namespace semaine1
             }
             return tableau;
         }
+        /// <summary>
+        /// Retourne un tableau d'une longueur donner en parametre rempli de nombre entre deux limite donner en parametre
+        /// </summary>
+        /// <remarks>Peut etre negatif et contenir les deux limites</remarks>
+        /// <param name="longueur">Longueur du tableau</param>
+        /// <param name="min">Premiere limite</param>
+        /// <param name="max">Deuxieme limite</param>
+        /// <returns>tableau initialiser</returns>
+        static int[] Exercice12(int longueur, int min, int max)
+        {
+            int[] tableau = new int[longueur];
+            Random random = new Random();
+            if (max > min)
+            {
+                int mem = max;
+                max = min;
+                min = mem;
+            }
+            for (int i = 0; i < tableau.Length; i++)
+            {
+                tableau[i] = random.Next(min,max+1);
+            }
+            return tableau;
+        }
 
         
     }
