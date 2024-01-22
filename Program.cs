@@ -9,7 +9,7 @@ namespace semaine1
     {
         static void Main(string[] args)
         {
-            Exercice24(7);
+            Exercice25(7);
         }
         /// <summary>
         /// Afficher "Allo p2" a la console
@@ -442,7 +442,28 @@ namespace semaine1
                 longueur--;
             } while (longueur > 0);
         }
+        /// <summary>
+        /// Affiche une forme de va et viens dont la ligne la plus longue est d'une longueur donner en parametre
+        /// </summary>
+        /// <param name="longueur">Longueur de la ligne la plus longue</param>
+        static void Exercice25(int longueur)
+        {
+            // debug 
+            if (longueur < 1)
+            {
+                Debug.WriteLine("Impossible d'afficher une forme d'une longueur de : " + longueur, "Exercice 25");
+            }
 
-        
+            // code
+            for (int i = longueur-1; i > 0; i--)
+            {
+                for (int j = 0; j < i+1; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+            Exercice22(longueur);
+        }
     }
 }
