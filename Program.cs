@@ -9,7 +9,7 @@ namespace semaine1
     {
         static void Main(string[] args)
         {
-            Exercice23(7);
+            Exercice24(7);
         }
         /// <summary>
         /// Afficher "Allo p2" a la console
@@ -417,5 +417,32 @@ namespace semaine1
                 longueur--;
             }
         }
+        /// <summary>
+        /// Affiche une forme de longueur decroissante de longueur donner en parametre
+        /// </summary>
+        /// <param name="longueur">Longueur de la forme</param>
+        static void Exercice24(int longueur)
+        {
+            // debug
+            if (longueur < 1)
+            {
+                Debug.WriteLine("Longueur ne peut pas etre inferieure a 1, est : " + longueur, "Exercice 24 ");
+            }
+
+            // code
+            do
+            {
+                int i = 0;
+                do
+                {
+                    Console.Write("*");
+                    i++;
+                } while (i < longueur);
+                Console.WriteLine();
+                longueur--;
+            } while (longueur > 0);
+        }
+
+        
     }
 }
