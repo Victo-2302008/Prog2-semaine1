@@ -1,0 +1,15 @@
+/home/krow/Documents/Coding/C#/Prog2-semaine1/obj/Debug/net7.0/Prog2-semaine1.csproj.AssemblyReference.cache
+/home/krow/Documents/Coding/C#/Prog2-semaine1/obj/Debug/net7.0/Prog2-semaine1.GeneratedMSBuildEditorConfig.editorconfig
+/home/krow/Documents/Coding/C#/Prog2-semaine1/obj/Debug/net7.0/Prog2-semaine1.AssemblyInfoInputs.cache
+/home/krow/Documents/Coding/C#/Prog2-semaine1/obj/Debug/net7.0/Prog2-semaine1.AssemblyInfo.cs
+/home/krow/Documents/Coding/C#/Prog2-semaine1/obj/Debug/net7.0/Prog2-semaine1.csproj.CoreCompileInputs.cache
+/home/krow/Documents/Coding/C#/Prog2-semaine1/bin/Debug/net7.0/Prog2-semaine1
+/home/krow/Documents/Coding/C#/Prog2-semaine1/bin/Debug/net7.0/Prog2-semaine1.deps.json
+/home/krow/Documents/Coding/C#/Prog2-semaine1/bin/Debug/net7.0/Prog2-semaine1.runtimeconfig.json
+/home/krow/Documents/Coding/C#/Prog2-semaine1/bin/Debug/net7.0/Prog2-semaine1.dll
+/home/krow/Documents/Coding/C#/Prog2-semaine1/bin/Debug/net7.0/Prog2-semaine1.pdb
+/home/krow/Documents/Coding/C#/Prog2-semaine1/obj/Debug/net7.0/Prog2-semaine1.dll
+/home/krow/Documents/Coding/C#/Prog2-semaine1/obj/Debug/net7.0/refint/Prog2-semaine1.dll
+/home/krow/Documents/Coding/C#/Prog2-semaine1/obj/Debug/net7.0/Prog2-semaine1.pdb
+/home/krow/Documents/Coding/C#/Prog2-semaine1/obj/Debug/net7.0/Prog2-semaine1.genruntimeconfig.cache
+/home/krow/Documents/Coding/C#/Prog2-semaine1/obj/Debug/net7.0/ref/Prog2-semaine1.dll
