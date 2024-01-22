@@ -226,7 +226,21 @@ namespace semaine1
             }
             return resultat;
         }
-
-        
+        /// <summary>
+        /// Additionne tout les nombres dans un tableau et retourne le resultat
+        /// </summary>
+        /// <param name="tableau">Tableau a additioner</param>
+        /// <returns>Resultat total</returns>
+        static int Exercice15(int[] tableau)
+        {
+            int resultat = 0;
+            int i = 0;
+            do
+            {
+                resultat += tableau[i];
+                i++;
+            } while (i < tableau.Length);
+            return resultat;
+        }
     }
 }
