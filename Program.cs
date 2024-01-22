@@ -242,5 +242,12 @@ namespace semaine1
             } while (i < tableau.Length);
             return resultat;
         }
+        /// <summary>
+        /// Afficher une grille de 3x3 de "*"
+        /// </summary>
+        static void Exercice16()
+        {
+            Console.WriteLine("* * *\n* * *\n* * *");
+        }
     }
 }
