@@ -10,8 +10,8 @@ namespace semaine1
     {
         static void Main(string[] args)
         {
-            int[] tableau = {1,2,3,4,5,6,7,8};
-            Console.Write(Exercice27(tableau));
+            int[] tableau = {1,2,3,-5,8,3};
+            Console.WriteLine(Exercice28(tableau));
         }
         /// <summary>
         /// Afficher "Allo p2" a la console
@@ -520,7 +520,51 @@ namespace semaine1
 
             return resultat;
         }
-        
+        /// <summary>
+        /// Retourne l'ecart type d'un tableau donner en parametre
+        /// </summary>
+        /// <param name="tableau">Tableau de nombre</param>
+        /// <returns>L'ecart type du tableau</returns>
+        static double Exercice28(int[] tableau)
+        {
+            double moyenne = Exercice27(tableau);
+            double[] ecarts = new double[tableau.Length];
+
+            for (int  i = 0; i < tableau.Length; i++)
+            {
+                ecarts[i] = Math.Abs(tableau[i]-moyenne);
+            }
+
+            double ecartType = 0.0;
+            foreach (double ecart in ecarts)
+            {
+                ecartType += ecart;
+            }
+            ecartType = ecartType / ecarts.Length;
+
+            return ecartType;
+        }
+        /// <summary>
+        /// Retourne le plus grand nombre des positions donner en parametre dans le tableau donner en parametre
+        /// </summary>
+        /// <param name="tableau">Tableau de nombre</param>
+        /// <param name="index1">Premier index</param>
+        /// <param name="index2">Deuxieme index</param>
+        /// <returns>Le plus grand nombre</returns>
+        static int Exercice29(int[] tableau, int index1, int index2)
+        {
+            int resultat;
+            if (tableau[index1] > tableau[index2])
+            {
+                resultat = tableau[index1];
+            }
+            else
+            {
+                resultat = tableau[index2];
+            }
+            return resultat;
+        }
+
         
     }
 }
