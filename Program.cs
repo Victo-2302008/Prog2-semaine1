@@ -392,7 +392,10 @@ namespace semaine1
                 Console.WriteLine();
             }
         }
-        
+        /// <summary>
+        /// Affiche une forme de longueur decroissante de longueur donner en parametre
+        /// </summary>
+        /// <param name="longueur">Longueur de la forme</param>
         static void Exercice23(int longueur)
         {
             // debug
