@@ -1,4 +1,5 @@
-﻿using System.Linq.Expressions;
+﻿using System.Globalization;
+using System.Linq.Expressions;
 
 namespace semaine1
 {
@@ -99,7 +100,77 @@ namespace semaine1
 
             return resultat;
         }
+        /// <summary>
+        /// Retourne un tableau de nombre d'une longueur donner en parametre
+        /// </summary>
+        /// <param name="longueur">Longueur du tableau</param>
+        /// <returns>Tableau initialiser a 0 de la longueur donner</returns>
+        static int[] Exercice8(int longueur)
+        {
+            int[] tableau = new int[longueur];
+            return tableau;
+        }
+        /// <summary>
+        /// Retourne un tableau de nombre d'une longueur donner en parametre rempli de nombre aleatoire entre deux nombre donner en parametre
+        /// </summary>
+        /// <remarks>Peut contenir le maximum</remarks>
+        /// <param name="longueur">Longueur du tableau</param>
+        /// <param name="min">Nombre minimum</param>
+        /// <param name="max">Nombre maximum</param>
+        /// <returns>Tableau initialiser</returns>
+        static int[] Exercice9(int longueur ,int min ,int max)
+        {
+            int[] tableau = new int[longueur];
+            Random random = new Random();
+            for (int i = 0; i < tableau.Length; i++)
+            {
+                tableau[i] = random.Next(min,max+1);
+            }
+            return tableau;
+        }
+        /// <summary>
+        /// Retourne un tableau d'une longueur donner en parametre, rempli de nombre entre deux nombre donner en parametre.
+        /// </summary>
+        /// <remarks>Si le max est inferieur au min, les deux chiffre sont inverser. Peut contenir le troisieme parametre</remarks>
+        /// <param name="longueur">Longueur du tableau</param>
+        /// <param name="min">Minimum</param>
+        /// <param name="max">Maximum</param>
+        /// <returns>Tableau initialiser</returns>
+        static int[] Exercice10(int longueur, int min, int max)
+        {
+            int[] tableau = new int[longueur];
+            Random random = new Random();
+            if (min > max)
+            {
+                int mem = max;
+                max = min;
+                min = mem;
+            }
+            for (int i = 0; i < tableau.Length;i++)
+            {
+                tableau[i] = random.Next(min,max+1);
+            }
+            return tableau;
+        }
+        /// <summary>
+        /// Retourne un tableau d'une longueur donner en parametre, rempli de nombre entre deux nombre donner en parametre.
+        /// </summary>
+        /// <remarks>Peut contenir des nombre negatif et le troisieme parametre</remarks>
+        /// <param name="longueur">Longueur du tableau</param>
+        /// <param name="minimum">Minimum</param>
+        /// <param name="maximum">Maximum</param>
+        /// <returns>Tableau initialiser</returns>
+        static int[] Exercice11(int longueur, int minimum, int maximum)
+        {
+            int[] tableau = new int[longueur];
+            Random random = new Random();
+            for (int i = 0; i < tableau.Length;i++)
+            {
+                tableau[i] = random.Next(minimum,maximum+1);
+            }
+            return tableau;
+        }
 
-        static 
+        
     }
 }
