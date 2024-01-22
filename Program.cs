@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq.Expressions;
+using System.Reflection.Metadata.Ecma335;
 
 namespace semaine1
 {
@@ -9,7 +10,8 @@ namespace semaine1
     {
         static void Main(string[] args)
         {
-            Console.Write(Exercice26(7));
+            int[] tableau = {1,2,3,4,5,6,7,8};
+            Console.Write(Exercice27(tableau));
         }
         /// <summary>
         /// Afficher "Allo p2" a la console
@@ -472,6 +474,14 @@ namespace semaine1
         /// <returns>Une string contenant la pyramide</returns>
         static string Exercice26(int longueur)
         {
+            // debug
+            if (longueur < 1)
+            {
+                Debug.WriteLine("Impossible de creer une pyramide de " + longueur + " de hauteur", "Exercice 26 ");
+            }
+
+
+            // code
             string resultat = "";
             int ligne = longueur;
             for (int i = 1; i < longueur+1; i++)
@@ -493,7 +503,24 @@ namespace semaine1
             }
             return resultat;
         }
+        /// <summary>
+        /// Retourne la moyenne des nombres dans un taleau donner en parametre
+        /// </summary>
+        /// <param name="tableau">Tableau de nombre</param>
+        /// <returns>Moyenne du tableau</returns>
+        static double Exercice27(int[] tableau)
+        {
+            int resultat = 0;
 
+            for (int i = 0; i < tableau.Length; i++)
+            {
+                resultat += tableau[i];
+            }
+            resultat = resultat / tableau.Length;
+
+            return resultat;
+        }
+        
         
     }
 }
