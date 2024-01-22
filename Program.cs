@@ -9,7 +9,7 @@ namespace semaine1
     {
         static void Main(string[] args)
         {
-            Exercice21(5,5,5,'5');
+            Exercice22(5);
         }
         /// <summary>
         /// Afficher "Allo p2" a la console
@@ -377,5 +377,22 @@ namespace semaine1
                 Console.WriteLine();
             }
         }
+        /// <summary>
+        /// Afficher une forme d'une longueur donner en parametre et afficher un charactere de plus a chaque ligne
+        /// </summary>
+        /// <param name="longueur">Longueur de la forme</param>
+        static void Exercice22(int longueur)
+        {
+            for (int i = 0; i < longueur; i++)
+            {
+                for (int j = 0; j < i+1 ; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+        }
+        
+        
     }
 }
