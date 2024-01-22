@@ -1,4 +1,6 @@
-﻿using System.Globalization;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics;
+using System.Globalization;
 using System.Linq.Expressions;
 
 namespace semaine1
@@ -208,5 +210,23 @@ namespace semaine1
             }
             return resultat;
         }
+        /// <summary>
+        /// Additionne tout les nombres dans un tableau et retourne le resultat
+        /// </summary>
+        /// <param name="tableau">Tableau a additioner</param>
+        /// <returns>Resultat total</returns>
+        static int Exercice14(int[] tableau)
+        {
+            int resultat = 0;
+            int i = 0;
+            while (i < tableau.Length)
+            {
+                resultat += tableau[i];
+                i++;
+            }
+            return resultat;
+        }
+
+        
     }
 }
