@@ -9,7 +9,7 @@ namespace semaine1
     {
         static void Main(string[] args)
         {
-            Exercice25(7);
+            Console.Write(Exercice26(7));
         }
         /// <summary>
         /// Afficher "Allo p2" a la console
@@ -465,5 +465,35 @@ namespace semaine1
             }
             Exercice22(longueur);
         }
+        /// <summary>
+        /// Retourne une string contenant un pyramide de la hauteur donner en parametre
+        /// </summary>
+        /// <param name="longueur">Hauteur de la pyramide</param>
+        /// <returns>Une string contenant la pyramide</returns>
+        static string Exercice26(int longueur)
+        {
+            string resultat = "";
+            int ligne = longueur;
+            for (int i = 1; i < longueur+1; i++)
+            {
+                for (int j = 0; j < ligne-1; j++)
+                {
+                    resultat += " ";
+                }
+                for (int k = 0; k < i; k++)
+                {
+                    resultat += "*";
+                    if (k != i)
+                    {
+                        resultat += " ";
+                    }
+                }
+                ligne--;
+                resultat += "\n";
+            }
+            return resultat;
+        }
+
+        
     }
 }
