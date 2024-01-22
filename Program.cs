@@ -9,7 +9,7 @@ namespace semaine1
     {
         static void Main(string[] args)
         {
-            Exercice19(6, 6);
+            Exercice21(5,5,5,'5');
         }
         /// <summary>
         /// Afficher "Allo p2" a la console
@@ -336,6 +336,43 @@ namespace semaine1
                 for (int j = 0; j < largeur; j++)
                 {
                     Console.Write(c + " ");
+                }
+                Console.WriteLine();
+            }
+        }
+        /// <summary>
+        /// Afficher une tableau de charactere donner en parametre d'une longueur et largeur donner en parametre. Cette forme est repeter un nombre de fois donner en parametre
+        /// </summary>
+        /// <param name="longueur">Longueur de la forme</param>
+        /// <param name="largeur">Largeur de la forme</param>
+        /// <param name="nbFormes">Nombre de formes</param>
+        /// <param name="c">Charactere a afficher</param>
+        static void Exercice21(int longueur, int largeur, int nbFormes, char c)
+        {
+            if (longueur < 1)
+            {
+                Console.WriteLine("Impossible de faire une grille de " + longueur + " de longueur");
+                return;
+            }
+            else if ( largeur < 1)
+            {
+                Console.WriteLine("Impossible de faire une grille de " + longueur + " de longueur");
+                return;
+            }
+            else if (nbFormes < 1)
+            {
+                Console.WriteLine("Impossible d'afficher une grille " + longueur + " fois");
+                return;
+            }
+            for (int k = 0; k < nbFormes; k++)
+            {
+                for (int i = 0; i < longueur; i++)
+                {
+                    for (int j = 0; j < largeur; j++)
+                    {
+                        Console.Write(c + " ");
+                    }
+                    Console.WriteLine();
                 }
                 Console.WriteLine();
             }
