@@ -9,7 +9,7 @@ namespace semaine1
     {
         static void Main(string[] args)
         {
-            
+            Exercice19(6, 6);
         }
         /// <summary>
         /// Afficher "Allo p2" a la console
@@ -306,9 +306,36 @@ namespace semaine1
             }
             for (int i = 0; i < longueur; i++)
             {
-                for (int j = 0; j < largeur; i++)
+                for (int j = 0; j < largeur; j++)
                 {
                     Console.Write("* ");
+                }
+                Console.WriteLine();
+            }
+        }
+        /// <summary>
+        /// Afficher une grille du charactere donner en parametre d'une longueur et largeur donner en parametre
+        /// </summary>
+        /// <param name="longueur">Longueur de la grille</param>
+        /// <param name="largeur">Largeur de la grille</param>
+        /// <param name="c">Charactere a afficher</param>
+        static void Exercice20(int longueur, int largeur, char c)
+        {
+            if (longueur < 1)
+            {
+                Console.WriteLine("Impossible de faire un tableau de " + longueur + " de longueur");
+                return;
+            }
+            else if ( largeur < 1)
+            {
+                Console.WriteLine("Impossible de faire un tableau de " + longueur + " de longueur");
+                return;
+            }
+            for (int i = 0; i < longueur; i++)
+            {
+                for (int j = 0; j < largeur; j++)
+                {
+                    Console.Write(c + " ");
                 }
                 Console.WriteLine();
             }
