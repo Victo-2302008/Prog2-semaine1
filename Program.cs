@@ -9,7 +9,7 @@ namespace semaine1
     {
         static void Main(string[] args)
         {
-            Exercice22(5);
+            Exercice23(7);
         }
         /// <summary>
         /// Afficher "Allo p2" a la console
@@ -393,6 +393,26 @@ namespace semaine1
             }
         }
         
-        
+        static void Exercice23(int longueur)
+        {
+            // debug
+            if (longueur < 1)
+            {
+                Debug.WriteLine("Longueur ne peut pas etre inferieure a 1, est : " + longueur, "Exercice 23 ");
+            }
+
+            // code
+            while (longueur > 0)
+            {
+                int i = 0;
+                while (i < longueur)
+                {
+                    Console.Write("*");
+                    i++;
+                }
+                Console.WriteLine();
+                longueur--;
+            }
+        }
     }
 }
