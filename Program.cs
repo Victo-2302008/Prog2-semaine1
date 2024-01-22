@@ -12,7 +12,12 @@ namespace semaine1
         {
             int[] tableau = {1,2,3,4};
             
-            Console.WriteLine(Exercice31(tableau));
+            Exercice32(tableau);
+
+            foreach(int num in tableau)
+            {
+                Console.WriteLine(num);
+            }
             
         }
         /// <summary>
@@ -637,7 +642,34 @@ namespace semaine1
 
             return index;
         }
+        /// <summary>
+        /// Inverse le tableau de nombre donner en parametre
+        /// </summary>
+        /// <remarks>Tableau doit etre au moins 2 de long</remarks>
+        /// <param name="tableau">Tableau a inverser</param>
+        static void Exercice32(int[] tableau)
+        {
+            // debug
+            
+            if (tableau.Length < 2)
+            {
+                Debug.WriteLine("Tableau est moins de 2 de long. Longueur : " + tableau.Length, "Exercice32 ");
+                return;
+            }
 
-        
+            // code
+
+            int[] resultat = new int[tableau.Length];
+
+            for (int i = 0; i < tableau.Length;i++)
+            {
+                resultat[resultat.Length-i-1] = tableau[i];
+            }
+
+            for (int j = 0;j < tableau.Length;j++)
+            {
+                tableau[j] = resultat[j];
+            }
+        }
     }
 }
