@@ -287,5 +287,31 @@ namespace semaine1
                 Console.WriteLine();
             }
         }
+        /// <summary>
+        /// Afficher une grille de "*" d'une longueur et largeur donner en parametre
+        /// </summary>
+        /// <param name="longueur">Longueur de la grille</param>
+        /// <param name="largeur">Largeur de la grille</param>
+        static void Exercice19(int longueur, int largeur)
+        {
+            if (longueur < 1)
+            {
+                Console.WriteLine("Impossible de faire un tableau de " + longueur + " de longueur");
+                return;
+            }
+            else if ( largeur < 1)
+            {
+                Console.WriteLine("Impossible de faire un tableau de " + longueur + " de longueur");
+                return;
+            }
+            for (int i = 0; i < longueur; i++)
+            {
+                for (int j = 0; j < largeur; i++)
+                {
+                    Console.Write("* ");
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }
