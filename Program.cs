@@ -194,7 +194,19 @@ namespace semaine1
             }
             return tableau;
         }
-
-        
+        /// <summary>
+        /// Additionne tout les nombres dans un tableau et retourne le resultat
+        /// </summary>
+        /// <param name="tableau">Tableau a additioner</param>
+        /// <returns>Resultat total</returns>
+        static int Exercice13(int[] tableau)
+        {
+            int resultat = 0;
+            for (int i = 0; i < tableau.Length ; i++)
+            {
+                resultat += tableau[i];
+            }
+            return resultat;
+        }
     }
 }
